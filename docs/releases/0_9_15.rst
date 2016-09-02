@@ -29,9 +29,9 @@ If you're not already running 0.9.14, Graphite-web's application database will n
 
 .. code-block:: none
 
-  sudo cp /opt/graphite/storage/graphite.db \
-        /opt/graphite/storage/graphite.db.backup-`date +%Y%m%d_%H%M%S`
-  sudo PYTHONPATH=/opt/graphite/webapp django-admin.py syncdb \
+  sudo cp /usr/share/graphite/storage/graphite.db \
+        /usr/share/graphite/storage/graphite.db.backup-`date +%Y%m%d_%H%M%S`
+  sudo PYTHONPATH=/usr/share/graphite/webapp django-admin.py syncdb \
         --noinput --no-initial-data --settings=graphite.settings
 
 Security Notes

@@ -56,7 +56,7 @@ library development headers to be available.
 Default Installation Layout
 ---------------------------
 
-Graphite defaults to an installation layout that puts the entire install in its own directory: ``/opt/graphite``
+Graphite defaults to an installation layout that puts the entire install in its own directory: ``/usr/share/graphite``
 
 Whisper
 ^^^^^^^
@@ -65,7 +65,7 @@ in the bin dir of the system's default prefix (generally ``/usr/bin/``).
 
 Carbon and Graphite-web
 ^^^^^^^^^^^^^^^^^^^^^^^
-Carbon and Graphite-web are installed in ``/opt/graphite/`` with the following layout:
+Carbon and Graphite-web are installed in ``/usr/share/graphite/`` with the following layout:
 
 - ``bin/``
 - ``conf/``

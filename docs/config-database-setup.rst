@@ -19,16 +19,16 @@ for full documentation of the DATABASES setting.
 .. note ::
   If you are using a custom database backend (other than SQLite) you must first create a $GRAPHITE_ROOT/webapp/graphite/local_settings.py file that overrides the database related settings from settings.py. Use $GRAPHITE_ROOT/webapp/graphite/local_settings.py.example as a template.
 
-If you are experiencing problems, uncomment the following line in /opt/graphite/webapp/graphite/local_settings.py:
+If you are experiencing problems, uncomment the following line in /usr/share/graphite/webapp/graphite/local_settings.py:
 
 .. code-block:: none
   
   # DEBUG = True
 
-and review your webapp logs. If you're using the default graphite-example-vhost.conf, your logs will be found in /opt/graphite/storage/log/webapp/.
+and review your webapp logs. If you're using the default graphite-example-vhost.conf, your logs will be found in /usr/share/graphite/storage/log/webapp/.
 
 If you're using the default SQLite database, your webserver will need permissions to read and write to the database file. So, for example, if your webapp is running in Apache as the 'nobody' user, you will need to fix the permissions like this:
 
 .. code-block:: none
   
-  sudo chown nobody:nobody /opt/graphite/storage/graphite.db
+  sudo chown nobody:nobody /usr/share/graphite/storage/graphite.db

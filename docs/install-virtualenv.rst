@@ -4,13 +4,13 @@ Installing in Virtualenv
 
 Installing in the Default Location
 ----------------------------------
-To install Graphite in the :ref:`default location <default-installation-layout>`, ``/opt/graphite/``,
-create a virtualenv in ``/opt/graphite`` and activate it:
+To install Graphite in the :ref:`default location <default-installation-layout>`, ``/usr/share/graphite/``,
+create a virtualenv in ``/usr/share/graphite`` and activate it:
 
 .. code-block:: none
 
-  virtualenv /opt/graphite
-  source /opt/graphite/bin/activate
+  virtualenv /usr/share/graphite
+  source /usr/share/graphite/bin/activate
 
 Once the virtualenv is activated, Graphite and Carbon can be installed
 :doc:`from source <install-source>` or :doc:`via pip <install-pip>`. Note that dependencies will
@@ -41,19 +41,19 @@ Apache mod_wsgi
 
   The version Python used to compile mod_wsgi must match the Python installed in the virtualenv (generally the system Python)
 
-To the Apache `mod_wsgi`_ config, add the root of the virtualenv as ``WSGIPythonHome``, ``/opt/graphite``
+To the Apache `mod_wsgi`_ config, add the root of the virtualenv as ``WSGIPythonHome``, ``/usr/share/graphite``
 in this example:
 
 .. code-block:: none
 
-   WSGIPythonHome /opt/graphite
+   WSGIPythonHome /usr/share/graphite
 
-and add the virtualenv's python site-packages to the ``graphite.wsgi`` file, python 2.6 in ``/opt/graphite``
+and add the virtualenv's python site-packages to the ``graphite.wsgi`` file, python 2.6 in ``/usr/share/graphite``
 in this example:
 
 .. code-block:: none
 
-   site.addsitedir('/opt/graphite/lib/python2.6/site-packages')
+   site.addsitedir('/usr/share/graphite/lib/python2.6/site-packages')
 
 See the `mod_wsgi documentation on Virtual Environments <http://code.google.com/p/modwsgi/wiki/VirtualEnvironments>` for more details.
 

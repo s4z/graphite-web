@@ -9,7 +9,7 @@ Versioned Graphite releases can be installed via `pip <http://pypi.python.org/py
 
 Installing in the Default Location
 ----------------------------------
-To install Graphite in the :ref:`default location <default-installation-layout>`, ``/opt/graphite/``,
+To install Graphite in the :ref:`default location <default-installation-layout>`, ``/usr/share/graphite/``,
 simply execute as root:
 
 .. code-block:: none

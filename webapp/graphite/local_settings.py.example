@@ -77,37 +77,44 @@
 # Filesystem Paths #
 #####################################
 #
-# Change only GRAPHITE_ROOT if your install is merely shifted from /opt/graphite
+# Change only GRAPHITE_ROOT if your install is merely shifted from /usr/share/graphite
 # to somewhere else
-#GRAPHITE_ROOT = '/opt/graphite'
+#GRAPHITE_ROOT = '/usr/share/graphite'
 
-# Most installs done outside of a separate tree such as /opt/graphite will
+# Most installs done outside of a separate tree such as /usr/share/graphite will
 # need to change these settings. Note that the default settings for each
 # of these is relative to GRAPHITE_ROOT.
-#CONF_DIR = '/opt/graphite/conf'
-#STORAGE_DIR = '/opt/graphite/storage'
-#STATIC_ROOT = '/opt/graphite/static'
-#LOG_DIR = '/opt/graphite/storage/log/webapp'
-#INDEX_FILE = '/opt/graphite/storage/index'     # Search index file
+#CONF_DIR = '/etc/graphite/conf'
+#STORAGE_DIR = '/usr/share/graphite/storage'
+#STATIC_ROOT = '/usr/share/graphite/static'
+#LOG_DIR = '/usr/share/graphite/storage/log/webapp'
+#INDEX_FILE = '/usr/share/graphite/storage/index'     # Search index file
+CONF_DIR = '/etc/graphite-web'
+STORAGE_DIR = '/var/lib/graphite-web'
+STATIC_ROOT = '/usr/share/graphite/static'
+LOG_DIR = '/var/log/graphite'
+INDEX_FILE = '/var/lib/graphite-web/index'  # Search index file
 
 # To further or fully customize the paths, modify the following. Note that the
 # default settings for each of these are relative to CONF_DIR and STORAGE_DIR
 #
 ## Webapp config files
-#DASHBOARD_CONF = '/opt/graphite/conf/dashboard.conf'
-#GRAPHTEMPLATES_CONF = '/opt/graphite/conf/graphTemplates.conf'
+#DASHBOARD_CONF = '/usr/share/graphite/conf/dashboard.conf'
+#GRAPHTEMPLATES_CONF = '/usr/share/graphite/conf/graphTemplates.conf'
+DASHBOARD_CONF = '/etc/graphite-web/dashboard.conf'
+GRAPHTEMPLATES_CONF = '/etc/graphite-web/graphTemplates.conf'
 
 ## Data directories
 #
 # NOTE: If any directory is unreadable in STANDARD_DIRS it will break metric browsing
 #
-#CERES_DIR = '/opt/graphite/storage/ceres'
-#WHISPER_DIR = '/opt/graphite/storage/whisper'
-#RRD_DIR = '/opt/graphite/storage/rrd'
+#CERES_DIR = '/usr/share/graphite/storage/ceres'
+#WHISPER_DIR = '/usr/share/graphite/storage/whisper'
+#RRD_DIR = '/usr/share/graphite/storage/rrd'
 #
 # Data directories using the "Standard" metrics finder (i.e. not Ceres)
 #STANDARD_DIRS = [WHISPER_DIR, RRD_DIR] # Default: set from the above variables
-
+WHISPER_DIR = '/data/carbon'
 
 #####################################
 # Email Configuration #
@@ -213,7 +220,7 @@
 #
 #DATABASES = {
 #    'default': {
-#        'NAME': '/opt/graphite/storage/graphite.db',
+#        'NAME': '/usr/share/graphite/storage/graphite.db',
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'USER': '',
 #        'PASSWORD': '',
@@ -289,7 +296,7 @@
 # A "keyfunc" is a user-defined python function that is given a metric name
 # and returns a string that should be used when hashing the metric name.
 # This is important when your hashing has to respect certain metric groupings.
-#CARBONLINK_HASHING_KEYFUNC = "/opt/graphite/bin/keyfuncs.py:my_keyfunc"
+#CARBONLINK_HASHING_KEYFUNC = "/usr/share/graphite/bin/keyfuncs.py:my_keyfunc"
 
 # Prefix for internal carbon statistics.
 #CARBON_METRIC_PREFIX='carbon'

@@ -21,8 +21,8 @@
 #   ../carbon/bin/carbon-cache.py start
 #   ../carbon/bin/carbon-cache.py status
 #
-#   mkdir -p .venv/storage/log/webapp /opt/graphite/storage/
-#   sudo chown -R $USER: /opt/graphite
+#   mkdir -p .venv/storage/log/webapp /usr/share/graphite/storage/
+#   sudo chown -R $USER: /usr/share/graphite
 #   .venv/bin/django-admin.py syncdb --settings=graphite.settings --pythonpath=webapp
 #   bin/run-graphite-devel-server.py ./
 #   # or

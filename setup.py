@@ -35,7 +35,7 @@ else:
     except ConfigParser.DuplicateSectionError:
         pass
     if not cf.has_option('install', 'prefix'):
-        cf.set('install', 'prefix', '/opt/graphite')
+        cf.set('install', 'prefix', '/usr/share/graphite')
     if not cf.has_option('install', 'install-lib'):
         cf.set('install', 'install-lib', '%(prefix)s/webapp')
 
@@ -93,7 +93,7 @@ try:
       package_data={'graphite' :
         ['templates/*', 'local_settings.py.example']},
       scripts=glob('bin/*'),
-      data_files=webapp_content.items() + storage_dirs + conf_files + examples,
+      data_files=webapp_content.items(),
       classifiers=[
           'Intended Audience :: Developers',
           'Natural Language :: English',

@@ -112,7 +112,7 @@ To determine the best retention configuration, you must answer all of the follow
 4. What is the coarsest precision you can use?
 5. How far back would you ever need to see data? (yes it has to be finite, and determine ahead of time)
 
-Once you have picked your naming scheme and answered all of the retention questions, you need to create a schema by creating/editing the ``/opt/graphite/conf/storage-schemas.conf`` file.
+Once you have picked your naming scheme and answered all of the retention questions, you need to create a schema by creating/editing the ``/usr/share/graphite/conf/storage-schemas.conf`` file.
 
 The format of the schemas file is easiest to demonstrate with an example. Let's say we've written a script to collect system load data from various servers, the naming scheme will be like so:
 

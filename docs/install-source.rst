@@ -16,15 +16,15 @@ project `download page`_ or the latest development branches may be cloned from t
 
 Installing in the Default Location
 ----------------------------------
-To install Graphite in the :ref:`default location <default-installation-layout>`, ``/opt/graphite/``, simply execute
+To install Graphite in the :ref:`default location <default-installation-layout>`, ``/usr/share/graphite/``, simply execute
 ``python setup.py install`` as root in each of the project directories for Graphite-web, Carbon, Whisper, and Ceres.
 
 .. _carbon-custom-location-source:
 
 Installing Carbon in a Custom Location
 --------------------------------------
-Carbon's ``setup.py`` installer is configured to use a ``prefix`` of ``/opt/graphite`` and an
-``install-lib`` of ``/opt/graphite/lib``. Carbon's lifecycle wrapper scripts and utilities
+Carbon's ``setup.py`` installer is configured to use a ``prefix`` of ``/usr/share/graphite`` and an
+``install-lib`` of ``/usr/share/graphite/lib``. Carbon's lifecycle wrapper scripts and utilities
 are installed in ``bin``, configuration within ``conf``, and stored data in ``storage`` all within ``prefix``.
 These may be overridden by passing parameters to the ``setup.py install`` command.
 
@@ -32,11 +32,11 @@ The following parameters influence the install location:
 
 - ``--prefix``
 
-  Location to place the ``bin/`` and ``storage/`` and ``conf/`` directories (defaults to ``/opt/graphite/``)
+  Location to place the ``bin/`` and ``storage/`` and ``conf/`` directories (defaults to ``/usr/share/graphite/``)
 
 - ``--install-lib``
 
-  Location to install Python modules (default: ``/opt/graphite/lib``)
+  Location to install Python modules (default: ``/usr/share/graphite/lib``)
 
 - ``--install-data``
 
@@ -64,17 +64,17 @@ configuration in ``/usr/share/graphite``:
 
 Installing Graphite-web in a Custom Location
 --------------------------------------------
-Graphite-web's ``setup.py`` installer is configured to use a ``prefix`` of ``/opt/graphite`` and an ``install-lib`` of ``/opt/graphite/webapp``. Utilities are installed in ``bin``, and configuration in ``conf`` within the ``prefix``. These may be overridden by passing parameters to ``setup.py install``
+Graphite-web's ``setup.py`` installer is configured to use a ``prefix`` of ``/usr/share/graphite`` and an ``install-lib`` of ``/usr/share/graphite/webapp``. Utilities are installed in ``bin``, and configuration in ``conf`` within the ``prefix``. These may be overridden by passing parameters to ``setup.py install``
 
 The following parameters influence the install location:
 
 - ``--prefix``
 
-  Location to place the ``bin/`` and ``conf/`` directories (defaults to ``/opt/graphite/``)
+  Location to place the ``bin/`` and ``conf/`` directories (defaults to ``/usr/share/graphite/``)
 
 - ``--install-lib``
 
-  Location to install Python modules (default: ``/opt/graphite/webapp``)
+  Location to install Python modules (default: ``/usr/share/graphite/webapp``)
 
 - ``--install-data``
 
